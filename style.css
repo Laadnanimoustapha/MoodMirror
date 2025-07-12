@@ -1,0 +1,257 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    padding: 20px;
+    transition: background 0.5s ease;
+}
+
+/* Main heading */
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Subtitle */
+#subtitle {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Main container */
+.MAIN {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Paragraphs */
+#p1 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: 500;
+}
+
+#p2 {
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #777;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Input field */
+#moodInput {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+#moodInput:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    background: #fff;
+}
+
+#moodInput::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Select dropdown */
+#moodSelect {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+
+#moodSelect:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    background: #fff;
+}
+
+/* Buttons */
+#moodBtn, #History, #backBtn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    margin: 5px;
+}
+
+#moodBtn:hover, #History:hover, #backBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+#moodBtn:active, #History:active, #backBtn:active {
+    transform: translateY(0);
+}
+
+#History::before {
+    content: "📊 ";
+    margin-right: 5px;
+}
+
+/* Result box */
+#resultBox {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: slideIn 0.6s ease-out;
+    margin-top: 20px;
+    display: none;
+}
+
+#resultBox h3 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+#resultBox p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+#resultBox strong {
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Mood-specific backgrounds */
+body.happy {
+    background: linear-gradient(135deg, #f1f38bff 0%, #edfd06ff 100%);
+}
+
+body.sad {
+    background: linear-gradient(135deg, #000000ff 0%, #ea01ffff 100%);
+}
+
+body.angry {
+    background: linear-gradient(135deg, #d24c4ca7 0%, #ff3300ff 100%);
+}
+
+body.lost {
+    background: linear-gradient(135deg, #000000ff 0%, #764ba2 100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .MAIN, #resultBox {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    #moodInput, #moodSelect {
+        padding: 12px;
+    }
+    
+    #moodBtn, #History, #backBtn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    #subtitle {
+        font-size: 1rem;
+    }
+    
+    .MAIN, #resultBox {
+        padding: 25px 15px;
+    }
+    
+    #resultBox p {
+        font-size: 1rem;
+    }
+}

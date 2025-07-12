@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodMirror</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MoodMirror</h1>
+    <h3 id="subtitle">This is your emotional dashboard</h3>
+    <div class="MAIN">
+        <p id="p1">Tell us how you feel</p>
+        <input type="text" id="moodInput" placeholder="Happy, Angry...">
+        <p id="p2">-----OR-----</p>
+        <select id="moodSelect">
+            <option value="Happy">Happy</option>
+            <option value="Sad">Sad</option>
+            <option value="Angry">Angry</option>
+            <option value="Lost">Lost</option>
+        </select>
+        <button type="button" id="moodBtn">Let's see</button>
+    </div>
+    <div id="resultBox"></div>
+    <button id="History">History</button>
+    <script src="logic.js"></script>
+    <script src="ai.js"></script>
+</body>
+</html>
