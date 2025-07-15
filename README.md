@@ -10,6 +10,11 @@ MoodMirror is a simple web application that acts as your emotional dashboard. It
 - **Dynamic UI:** The appearance and messages adapt to the detected mood.
 - **Responsive Design:** Works well on both desktop and mobile devices.
 
+## Enable AI
+To use the mood-detection AI, you need a free Hugging Face account.
+Get your API key from: https://huggingface.co/settings/tokens
+Paste it into ai.js where it says HF_API_KEY.
+
 ## How It Works
 
 1. User enters their mood as text or selects from a dropdown.
